@@ -1,0 +1,97 @@
+<%- include('partials/header') %>
+
+<section id="hero" class="hero section">
+    <div class="hero-content float-up">
+        <div class="badge">Available for Work</div>
+        <h1>Building digital products with clean, <span class="highlight">weightless design.</span></h1>
+        <p>I'm a freelance developer & designer creating high-performing web applications with a focus on seamless user experiences and modern aesthetics. Now powered by a full Node.js backend.</p>
+        <div class="hero-actions">
+            <a href="#work" class="btn btn-primary">View My Work</a>
+            <a href="#services" class="btn btn-secondary">My Services</a>
+        </div>
+    </div>
+    <div class="hero-image float-up-delay">
+        <div class="avatar-container">
+            <img src="/assets/avatar.png" alt="Yujin - Freelance Developer" class="avatar float-anim">
+            <div class="glass-card stat-card stat-1 float-anim-alt">
+                <span class="stat-number">5+</span>
+                <span class="stat-label">Years Exp.</span>
+            </div>
+            <div class="glass-card stat-card stat-2 float-anim">
+                <span class="stat-number">50+</span>
+                <span class="stat-label">Projects</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="services" class="services section">
+    <div class="section-header float-up">
+        <h2>My Expertise</h2>
+        <p>Specialized services to bring your ideas to life.</p>
+    </div>
+    <div class="services-grid">
+        <div class="glass-card service-card float-up">
+            <div class="service-icon">✦</div>
+            <h3>Web Development</h3>
+            <p>Building responsive, performant websites using the latest web technologies like React, Express, and Vanilla JS.</p>
+        </div>
+        <div class="glass-card service-card float-up" style="transition-delay: 0.1s">
+            <div class="service-icon">✧</div>
+            <h3>UI/UX Design</h3>
+            <p>Crafting intuitive and aesthetically pleasing user interfaces with a focus on modern, clean design principles.</p>
+        </div>
+        <div class="glass-card service-card float-up" style="transition-delay: 0.2s">
+            <div class="service-icon">✪</div>
+            <h3>Backend Integration</h3>
+            <p>Developing robust RESTful APIs and server-side logic using Node.js to power full-stack applications.</p>
+        </div>
+    </div>
+</section>
+
+<section id="work" class="work section">
+    <div class="section-header float-up">
+        <h2>Selected Work</h2>
+        <p>A showcase of recent projects.</p>
+    </div>
+    <div class="work-grid">
+        <% projects.forEach((project, index) => { %>
+            <div class="glass-card project-card float-up" style="transition-delay: <%= index * 0.1 %>s">
+                <div class="project-image-wrapper">
+                    <img src="<%= project.thumbnail %>" alt="<%= project.title %> UI" class="project-image">
+                </div>
+                <div class="project-info">
+                    <span class="project-category"><%= project.category %></span>
+                    <h3><%= project.title %></h3>
+                    <p><%= project.shortDescription %></p>
+                    <a href="/project/<%= project.id %>" class="project-link">View Case Study →</a>
+                </div>
+            </div>
+        <% }) %>
+    </div>
+</section>
+
+<section id="contact" class="contact section">
+    <div class="glass-card contact-card float-up">
+        <div class="contact-content">
+            <h2>Ready to start your next project?</h2>
+            <p>Let's collaborate to create something exceptional.</p>
+            
+            <form id="contactForm" class="contact-form">
+                <div class="form-group">
+                    <input type="text" id="name" name="name" placeholder="Your Name" required class="form-control">
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" name="email" placeholder="Your Email" required class="form-control">
+                </div>
+                <div class="form-group">
+                    <textarea id="message" name="message" placeholder="Project Details" required class="form-control" rows="4"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary lg w-100" id="submitBtn">Send Message</button>
+                <div id="formMessage" class="form-message"></div>
+            </form>
+        </div>
+    </div>
+</section>
+
+<%- include('partials/footer') %>
