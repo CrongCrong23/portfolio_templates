@@ -532,7 +532,7 @@ footer {
     .project-meta { grid-template-columns: 1fr; gap: 1rem; }
     .gallery-grid { grid-template-columns: 1fr; }
     
-    .hero-image { display: none; } /* Hide complex 3d image on very small mobile for focus */
+    .hero-image { margin-top: 2rem; }
     .hero { min-height: 70vh; }
 }
 /* CSS additions for form and project details */

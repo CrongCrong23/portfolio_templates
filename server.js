@@ -8,16 +8,17 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-// Project Data
-const projects = [
+// Template Data
+const templates = [
     {
-        id: 'aperture-analytics',
-        title: 'Aperture Analytics',
-        category: 'Web Application',
-        shortDescription: 'A clean, data-heavy dashboard interface built for a SaaS analytics platform.',
-        fullDescription: 'Aperture Analytics is a comprehensive B2B SaaS platform that helps digital marketing teams track their KPIs in real time. The main challenge was to display massive amounts of data without overwhelming the user. We utilized a clean, minimalist design language inspired by modern sleek aesthetics to create a weightless data experience with lots of whitespace, crisp typography, and subtle glassmorphic panels.',
-        role: 'Lead Frontend Developer & UI Designer',
-        techStack: ['Node.js', 'React', 'D3.js', 'Express', 'Vanilla CSS'],
+        id: 'the-minimalist-dev',
+        title: 'The Minimalist Dev',
+        category: 'Developer Template',
+        shortDescription: 'A clean, data-heavy dashboard interface repurposed for a developer portfolio.',
+        fullDescription: 'The Minimalist Dev is a comprehensive template designed for software engineers and developers who want to showcase their technical prowess without overwhelming the user with flashy design. We utilized a clean, minimalist design language inspired by modern sleek aesthetics to create a weightless data experience with lots of whitespace, crisp typography, and subtle glassmorphic panels. Perfect for displaying complex case studies and GitHub metrics.',
+        idealFor: 'Software Engineers & Backend Developers',
+        features: ['Dark Mode Ready', 'Project Filtering', 'GitHub API Integration', 'Responsive', 'Vanilla CSS'],
+        price: '$49',
         thumbnail: '/assets/project1.png',
         heroImage: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80',
         gallery: [
@@ -26,13 +27,14 @@ const projects = [
         ]
     },
     {
-        id: 'aura-finance',
-        title: 'Aura Finance App',
-        category: 'Mobile Design',
-        shortDescription: 'A minimalist personal finance application with a focus on ease of use and clean data presentation.',
-        fullDescription: 'Aura Finance takes the stress out of personal budgeting. Working closely with the founders, I designed a mobile app interface that feels welcoming rather than daunting. By employing soft shadows, rounded typography, and a calming white theme, we achieved a user-friendly product that demystifies personal finance for Gen Z users.',
-        role: 'UX/UI Designer',
-        techStack: ['Figma', 'Protopie', 'React Native'],
+        id: 'creative-studio-pro',
+        title: 'Creative Studio Pro',
+        category: 'Designer Template',
+        shortDescription: 'A sleek, visual-first template designed for UI/UX designers and agencies.',
+        fullDescription: 'Creative Studio Pro takes the stress out of building a design portfolio. It features massive, high-quality image placeholders and smooth, buttery scroll animations. By employing soft shadows, rounded typography, and a calming white theme, we achieved a user-friendly product that perfectly highlights your creative case studies without distracting from the work itself.',
+        idealFor: 'UI/UX Designers & Creative Agencies',
+        features: ['Figma Source Included', 'Smooth Scrolling', 'Lightbox Gallery', 'SEO Optimized'],
+        price: '$59',
         thumbnail: '/assets/project2.png',
         heroImage: 'https://images.unsplash.com/photo-1616469829581-73993eb86b02?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80',
         gallery: [
@@ -41,13 +43,14 @@ const projects = [
         ]
     },
     {
-        id: 'zenith-workspace',
-        title: 'Zenith Workspace',
-        category: 'Desktop App',
-        shortDescription: 'An AI-powered integrated development environment (IDE) theme and layout system.',
-        fullDescription: 'Zenith Workspace is a conceptual agentic IDE inspired by next-generation coding tools. It features a seamless, weightless interface designed to keep developers in the flow state. The UI leverages a deeply optimized dark mode for intense coding sessions, seamlessly transitioning to a crisp, high-contrast light mode depending on the ambient lighting.',
-        role: 'Product Designer',
-        techStack: ['Electron', 'TypeScript', 'Vanilla JS'],
+        id: 'neo-brutalism-showcase',
+        title: 'Neo-Brutalism Showcase',
+        category: 'Agency Template',
+        shortDescription: 'An edgy, bold template perfect for forward-thinking creative freelancers.',
+        fullDescription: 'Stand out from the crowd with the Neo-Brutalism Showcase. This template is inspired by the bold, unapologetic design trend sweeping the web. It features a seamless, weightless interface designed to keep users engaged. The UI leverages a deeply optimized dark mode for intense visual impact, making your portfolio unforgettable.',
+        idealFor: 'Creative Directors & Marketing Agencies',
+        features: ['Bold Typography', 'Micro-interactions', 'Dark Mode Only', 'CMS Ready'],
+        price: '$79',
         thumbnail: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
         heroImage: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80',
         gallery: [
@@ -59,23 +62,23 @@ const projects = [
 
 // Routes
 app.get('/', (req, res) => {
-    res.render('index', { projects });
+    res.render('index', { templates });
 });
 
-app.get('/project/:id', (req, res) => {
-    const project = projects.find(p => p.id === req.params.id);
-    if (!project) {
+app.get('/template/:id', (req, res) => {
+    const template = templates.find(t => t.id === req.params.id);
+    if (!template) {
         return res.status(404).render('404');
     }
-    res.render('project', { project });
+    res.render('template', { template });
 });
 
 app.post('/api/contact', (req, res) => {
     const { name, email, message } = req.body;
-    console.log(`New contact form submission from ${name} (${email}): ${message}`);
+    console.log(`New template inquiry from ${name} (${email}): ${message}`);
     // Simulate processing delay
     setTimeout(() => {
-        res.json({ success: true, message: "Thank you! I'll be in touch soon." });
+        res.json({ success: true, message: "Thank you! I'll be in touch soon with your template access." });
     }, 1000);
 });
 

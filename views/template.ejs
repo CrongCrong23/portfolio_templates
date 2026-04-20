@@ -1,0 +1,59 @@
+<%- include('partials/header', { title: template.title }) %>
+
+<article class="project-detail">
+    <header class="project-hero float-up">
+        <div class="project-hero-content">
+            <span class="project-category"><%= template.category %></span>
+            <h1><%= template.title %></h1>
+            <p class="project-lead"><%= template.shortDescription %></p>
+        </div>
+        <div class="project-hero-image-wrapper glass-card">
+            <img src="<%= template.heroImage %>" alt="<%= template.title %> Preview" class="project-hero-image">
+        </div>
+    </header>
+
+    <div class="project-body section">
+        <div class="project-meta float-up-delay" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+            <div style="display: flex; gap: 3rem; flex-wrap: wrap;">
+                <div class="meta-item">
+                    <h4>Ideal For</h4>
+                    <p><%= template.idealFor %></p>
+                </div>
+                <div class="meta-item">
+                    <h4>Features</h4>
+                    <div class="tech-tags">
+                        <% template.features.forEach(feature => { %>
+                            <span class="tech-tag"><%= feature %></span>
+                        <% }) %>
+                    </div>
+                </div>
+            </div>
+            <div class="meta-item" style="text-align: right; min-width: 200px;">
+                <span style="font-size: 2.5rem; font-weight: 700; display: block; color: var(--text-main); line-height: 1;"><%= template.price %></span>
+                <a href="/#contact" class="btn btn-primary" style="margin-top: 1rem; width: 100%;">Purchase Template</a>
+            </div>
+        </div>
+
+        <div class="project-description float-up">
+            <h2>About this Template</h2>
+            <p><%= template.fullDescription %></p>
+        </div>
+
+        <div class="project-gallery float-up">
+            <h2>Template Highlights</h2>
+            <div class="gallery-grid">
+                <% template.gallery.forEach(img => { %>
+                    <div class="gallery-item glass-card">
+                        <img src="<%= img %>" alt="Template Detail">
+                    </div>
+                <% }) %>
+            </div>
+        </div>
+        
+        <div class="project-nav float-up">
+            <a href="/#templates" class="btn btn-secondary">← Back to Showcase</a>
+        </div>
+    </div>
+</article>
+
+<%- include('partials/footer') %>
