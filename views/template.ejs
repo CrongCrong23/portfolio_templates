@@ -1,13 +1,16 @@
 <%- include('partials/header', { title: template.title }) %>
 
 <article class="project-detail">
+    <div class="project-nav float-up" style="margin-top: 0; padding-top: 0; border-top: none; margin-bottom: 2rem;">
+        <a href="/#templates" class="btn btn-secondary">← Back to Showcase</a>
+    </div>
     <header class="project-hero float-up">
         <div class="project-hero-content">
             <span class="project-category"><%= template.category %></span>
             <h1><%= template.title %></h1>
             <p class="project-lead"><%= template.shortDescription %></p>
         </div>
-        <div class="project-hero-image-wrapper glass-card">
+        <div class="project-hero-image-wrapper glass-card" style="position: relative;">
             <img src="<%= template.heroImage %>" alt="<%= template.title %> Preview" class="project-hero-image">
         </div>
     </header>
@@ -18,14 +21,9 @@
                 <div class="meta-item">
                     <h4>Ideal For</h4>
                     <p><%= template.idealFor %></p>
-                </div>
-                <div class="meta-item">
-                    <h4>Features</h4>
-                    <div class="tech-tags">
-                        <% template.features.forEach(feature => { %>
-                            <span class="tech-tag"><%= feature %></span>
-                        <% }) %>
-                    </div>
+                    <a href="<%= template.websiteLink %>" target="_blank" class="website-hyperlink" style="display: inline-block; margin-top: 0.5rem; color: var(--primary); text-decoration: underline; text-underline-offset: 4px; font-weight: 500;">
+                        Visit Live Website ↗
+                    </a>
                 </div>
             </div>
             <div class="meta-item" style="text-align: right; min-width: 200px;">
@@ -48,10 +46,6 @@
                     </div>
                 <% }) %>
             </div>
-        </div>
-        
-        <div class="project-nav float-up">
-            <a href="/#templates" class="btn btn-secondary">← Back to Showcase</a>
         </div>
     </div>
 </article>

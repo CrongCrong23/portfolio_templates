@@ -7,7 +7,6 @@
         <p>I craft premium, high-performing web portfolio templates for freelancers and agencies. Stand out from the crowd with clean aesthetics and seamless user experiences.</p>
         <div class="hero-actions">
             <a href="#templates" class="btn btn-primary">Browse Templates</a>
-            <a href="#features" class="btn btn-secondary">Why Choose Us</a>
         </div>
     </div>
     <div class="hero-image float-up-delay">
@@ -25,30 +24,6 @@
     </div>
 </section>
 
-<section id="features" class="services section">
-    <div class="section-header float-up">
-        <h2>Template Features</h2>
-        <p>Built for performance, designed for impact.</p>
-    </div>
-    <div class="services-grid">
-        <div class="glass-card service-card float-up">
-            <div class="service-icon">✦</div>
-            <h3>Fully Responsive</h3>
-            <p>Every template looks flawless on mobile, tablet, and desktop devices right out of the box.</p>
-        </div>
-        <div class="glass-card service-card float-up" style="transition-delay: 0.1s">
-            <div class="service-icon">✧</div>
-            <h3>Easy Customization</h3>
-            <p>Clean code and organized CSS variables make it incredibly simple to match your personal brand.</p>
-        </div>
-        <div class="glass-card service-card float-up" style="transition-delay: 0.2s">
-            <div class="service-icon">✪</div>
-            <h3>Blazing Fast</h3>
-            <p>Optimized for speed and SEO to ensure your portfolio ranks high and loads instantly.</p>
-        </div>
-    </div>
-</section>
-
 <section id="templates" class="work section">
     <div class="section-header float-up">
         <h2>Browse Templates</h2>
@@ -56,7 +31,7 @@
     </div>
     <div class="work-grid">
         <% templates.forEach((template, index) => { %>
-            <div class="glass-card project-card float-up" style="transition-delay: <%= index * 0.1 %>s">
+            <a href="/template/<%= template.id %>" class="glass-card project-card float-up" style="transition-delay: <%= index * 0.1 %>s; display: block; text-decoration: none; color: inherit;">
                 <div class="project-image-wrapper">
                     <img src="<%= template.thumbnail %>" alt="<%= template.title %> Preview" class="project-image">
                 </div>
@@ -65,11 +40,11 @@
                     <h3><%= template.title %></h3>
                     <p><%= template.shortDescription %></p>
                     <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1.5rem;">
-                        <a href="/template/<%= template.id %>" class="project-link" style="margin-top: 0;">View Details →</a>
+                        <span class="project-link" style="margin-top: 0;">View Details →</span>
                         <span style="font-weight: 600; font-size: 1.1rem; color: var(--text-main);"><%= template.price %></span>
                     </div>
                 </div>
-            </div>
+            </a>
         <% }) %>
     </div>
 </section>
