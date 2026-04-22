@@ -15,52 +15,40 @@ app.use(express.json());
 // Template Data
 const templates = [
     {
-        id: 'the-minimalist-dev',
-        title: 'The Minimalist Dev',
-        category: 'Developer Template',
-        shortDescription: 'A clean, data-heavy dashboard interface repurposed for a developer portfolio.',
-        fullDescription: 'The Minimalist Dev is a comprehensive template designed for software engineers and developers who want to showcase their technical prowess without overwhelming the user with flashy design. We utilized a clean, minimalist design language inspired by modern sleek aesthetics to create a weightless data experience with lots of whitespace, crisp typography, and subtle glassmorphic panels. Perfect for displaying complex case studies and GitHub metrics.',
-        idealFor: 'Software Engineers & Backend Developers',
-        websiteLink: 'https://demo.example.com/minimalist',
-        price: '$49',
-        thumbnail: '/assets/project1.png',
-        heroImage: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80',
-        gallery: [
-            'https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-            'https://images.unsplash.com/photo-1543286386-2e659306cd6c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
-        ]
-    },
-    {
         id: 'creative-studio-pro',
-        title: 'Creative Studio Pro',
-        category: 'Designer Template',
-        shortDescription: 'A sleek, visual-first template designed for UI/UX designers and agencies.',
-        fullDescription: 'Creative Studio Pro takes the stress out of building a design portfolio. It features massive, high-quality image placeholders and smooth, buttery scroll animations. By employing soft shadows, rounded typography, and a calming white theme, we achieved a user-friendly product that perfectly highlights your creative case studies without distracting from the work itself.',
-        idealFor: 'UI/UX Designers & Creative Agencies',
-        websiteLink: 'https://demo.example.com/creative',
-        price: '$59',
-        thumbnail: '/assets/project2.png',
-        heroImage: 'https://images.unsplash.com/photo-1616469829581-73993eb86b02?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80',
-        gallery: [
-            'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-            'https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
-        ]
+        title: 'Windows 98 Portfolio',
+        category: 'Nostalgic Portfolio',
+        shortDescription: 'A playful Windows 98–inspired portfolio that transforms your work into an interactive desktop experience.',
+        fullDescription: 'Retro Desktop is a nostalgic portfolio template that reimagines the charm of classic Windows 98 interfaces for the modern web. Designed with pixel-perfect UI elements, draggable windows, and retro system aesthetics, it turns browsing into an interactive experience. From faux file explorers to clickable icons and layered pop-up windows, every detail is crafted to evoke early computing while still delivering smooth performance and usability. It’s a unique way to showcase projects, artwork, or case studies through a fun, memorable interface that stands out from conventional portfolios.',
+        idealFor: 'Creative Developers, UI Designers & Digital Artists',
+        websiteLink: 'https://yujin-portfolio-zeta.vercel.app/',
+        price: '$50',
+        thumbnail: '/assets/windows982.png',
+        heroImage: '/assets/windows982.png',
     },
     {
-        id: 'neo-brutalism-showcase',
-        title: 'Neo-Brutalism Showcase',
-        category: 'Agency Template',
-        shortDescription: 'An edgy, bold template perfect for forward-thinking creative freelancers.',
-        fullDescription: 'Stand out from the crowd with the Neo-Brutalism Showcase. This template is inspired by the bold, unapologetic design trend sweeping the web. It features a seamless, weightless interface designed to keep users engaged. The UI leverages a deeply optimized dark mode for intense visual impact, making your portfolio unforgettable.',
-        idealFor: 'Creative Directors & Marketing Agencies',
-        websiteLink: 'https://demo.example.com/brutalism',
-        price: '$79',
-        thumbnail: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-        heroImage: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80',
-        gallery: [
-            'https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-            'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
-        ]
+        id: 'archi-showcase',
+        title: 'Architectural Portfolio',
+        category: 'Architecture Template',
+        shortDescription: 'A structured, image-forward portfolio designed to present architectural projects with clarity and precision.',
+        fullDescription: 'Architectural Portfolio is a refined template tailored for architects and designers who need to present their work with both visual impact and technical clarity. Built around grid-based layouts and strong typographic hierarchy, it allows projects to be showcased through high-resolution imagery, detailed plans, and descriptive case studies. The design emphasizes balance, proportion, and whitespace—mirroring architectural principles—while maintaining smooth navigation for an effortless viewing experience. Ideal for displaying conceptual designs, built works, and professional documentation in a polished, modern format.',
+        idealFor: 'Architects, Interior Designers & Urban Planners',
+        websiteLink: 'https://archi-portfolio-omega.vercel.app/',
+        price: '$50',
+        thumbnail: '/assets/archi.png',
+        heroImage: '/assets/archi3.png',
+    },
+    {
+        id: 'the-minimalist-dev',
+        title: 'Art Showcase',
+        category: 'Artist Template',
+        shortDescription: 'A visually immersive portfolio template designed to highlight artwork with elegance and clarity.',
+        fullDescription: 'Art Showcase is a thoughtfully crafted portfolio template built for artists who want their work to take center stage. Featuring a clean, gallery-inspired layout, it emphasizes high-quality visuals, balanced spacing, and refined typography to create a seamless viewing experience. Subtle transitions and intuitive navigation allow visitors to explore collections effortlessly, making it ideal for presenting illustrations, paintings, digital art, and mixed media projects in a professional and engaging way.',
+        idealFor: 'Visual Artists, Illustrators & Digital Creators',
+        websiteLink: 'https://project-artwork-psi.vercel.app/',
+        price: '$50',
+        thumbnail: '/assets/artwork1.png',
+        heroImage: '/assets/artwork1.png',
     }
 ];
 
@@ -80,7 +68,7 @@ app.get('/template/:id', (req, res) => {
 app.post('/api/contact', async (req, res) => {
     const { name, email, message } = req.body;
     console.log(`New template inquiry from ${name} (${email}): ${message}`);
-    
+
     try {
         await resend.emails.send({
             from: 'onboarding@resend.dev',
