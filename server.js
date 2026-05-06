@@ -110,6 +110,18 @@ const templates = [
         price: '$100',
         thumbnail: '/assets/va1.png',
         heroImage: '/assets/va1.png',
+    },
+    {
+        id: 'project-manager-portfolio',
+        title: 'Project Manager Portfolio',
+        category: 'Project Manager Template',
+        shortDescription: 'A structured and results-driven portfolio template designed to showcase project management expertise and achievements.',
+        fullDescription: 'ProjectFlow Pro is built for project managers who want to clearly present their experience, methodologies, and successful project outcomes. It features dedicated sections for case studies, project timelines, tools, certifications, and key metrics, allowing you to highlight both strategic thinking and execution skills. With a clean, professional layout and intuitive navigation, it helps potential employers or clients quickly understand your leadership style, workflow, and impact across projects.',
+        idealFor: 'Project Managers, Scrum Masters & Operations Professionals',
+        websiteLink: 'https://project-manager-dusky-xi.vercel.app/',
+        price: '$100',
+        thumbnail: '/assets/pm1.png',
+        heroImage: '/assets/pm1.png',
     }
 ];
 
