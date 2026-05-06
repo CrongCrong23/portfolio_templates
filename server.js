@@ -122,6 +122,18 @@ const templates = [
         price: '$100',
         thumbnail: '/assets/pm1.png',
         heroImage: '/assets/pm1.png',
+    },
+    {
+        id: 'loan-broker-portfolio',
+        title: 'LendPro Portfolio',
+        category: 'Loan Broker Template',
+        shortDescription: 'A professional and trust-focused portfolio template designed to showcase loan services, expertise, and client success.',
+        fullDescription: 'LendPro Portfolio is crafted for loan brokers who want to present their services with clarity and credibility. It includes structured sections for loan offerings, application processes, client testimonials, partner institutions, and success stories. The clean and authoritative design builds trust with potential clients while guiding them through available financing options. With clear calls-to-action and organized content, it helps convert visitors into qualified leads effectively.',
+        idealFor: 'Loan Brokers, Mortgage Advisors & Financial Consultants',
+        websiteLink: 'https://financial-website-plum.vercel.app/',
+        price: '$100',
+        thumbnail: '/assets/loan1.png',
+        heroImage: '/assets/loan1.png',
     }
 ];
 
