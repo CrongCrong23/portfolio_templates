@@ -14,6 +14,19 @@ app.use(express.json());
 
 // Template Data
 const templates = [
+
+    {
+        id: 'shopify-developer-portfolio',
+        title: 'ShopifyCraft',
+        category: 'Shopify Developer Template',
+        shortDescription: 'A modern and conversion-focused portfolio template built for showcasing Shopify development projects and eCommerce expertise.',
+        fullDescription: 'ShopifyCraft is designed for Shopify developers who want to highlight their technical skills, custom store builds, and eCommerce solutions in a professional way. Featuring sections for featured stores, development services, performance metrics, client testimonials, and case studies, it allows you to clearly demonstrate your ability to create high-converting online shops. The sleek layout, responsive design, and clean presentation make it ideal for attracting clients looking for custom Shopify development and optimization services.',
+        idealFor: 'Shopify Developers, eCommerce Developers & Freelance Web Developers',
+        websiteLink: 'https://shopify-developer-chi.vercel.app/',
+        price: '$100',
+        thumbnail: '/assets/shopify1.png',
+        heroImage: '/assets/shopify1.png',
+    },
     {
         id: 'creative-studio-pro',
         title: 'Windows 98 Portfolio',
